@@ -1,0 +1,259 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  /*varibles*/
+  :root{
+    --main-radius:5px;
+    --main-padding:5px;
+    --nav-padding:5px 0px 5px 0px;
+  }
+  .container{
+    display:grid;
+    height:100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.4fr 1.8fr 1.0fr 0.2fr;
+    grid-template-areas:
+        "nav nav nav nav " 
+        "sidebar main main main"
+        "sidebar cont1 cont2 cont3"
+        "sidebar footer footer footer";
+
+   text-align: center;
+   row-gap: .2rem;
+   column-gap: .2rem;
+  }
+  
+   nav{
+    grid-area: nav;
+    background-color: rgb(121, 125, 129);
+    border-radius: var(--main-radius);
+    padding: var(--nav-padding);
+    
+    
+
+  }
+  .nav-title-left{
+    float:left;
+    padding:10px 0px 0px 50px;
+  }
+  .nav-title-right{
+    float:right;
+    padding:10px 50px 0px 0px;
+  }
+  .img1{
+    opacity: 20%;
+    padding-bottom: 15px;
+  }
+  .img2{
+    opacity: 40%;
+    padding-bottom: 8px;
+  }
+  .img3{
+    opacity: 65%;
+  }
+  .img4{
+    opacity: 100%;
+    
+  }
+  .img5{
+    opacity: 65%;
+  }
+  .img6{
+    opacity: 40%;
+    padding-bottom: 8px;
+  }
+  .img7{
+    opacity: 20%;
+    padding-bottom: 15px;
+  }
+
+  main{
+    background-color: black;
+    grid-area: main;
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
+  }
+  .main-pic1{
+    float: left;
+    color:red;
+    padding-left: 25px;
+
+  }
+  .mp1{
+    border-radius: 15px;
+  }
+  .main-pic2{
+    float:left;
+    padding-left:10px;
+    color: red;
+    font-size: 1.5em;
+  }
+  .mp2{
+    border-radius: 15px;
+  }
+  
+  .main-pic3{
+    float:left;
+    padding-left: 10px;
+    color: red;
+  }
+  .mp3{
+    border-radius: 15px;
+  }
+
+  #sidebar{
+    background-color: rgb(20, 21, 21);
+    color: rgb(96, 94, 92);
+    grid-area: sidebar;
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
+  }
+  .ernie{
+    border-radius: 125px;
+    padding-top: 25px;
+  }
+  .pull-pork{
+    padding:60px 0px 0px 0px;
+  
+  }
+  #cont1{
+    
+    background-color: rgb(122, 123, 120);
+    grid-area: cont1;
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
+    z-index: 0;
+  }
+  .up-event{
+    color:black;
+    font-size: 1.5em;
+  }
+  #cont2{
+    background-image: url(images_alt/sausage_on_fork.jpg);
+    background-repeat:no-repeat;
+    background-size: cover;
+    opacity: 65%;
+    background-color: rgb(186, 181, 177);
+    grid-area: cont2;
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
+  }
+  #cont3{
+    background-color: rgb(137, 136, 136);
+    grid-area: cont3;
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
+    margin-bottom: 0%;
+  }
+  .cont3a{
+    padding-top: -110px;
+    height:75px;
+    margin-top: 50px;
+  }
+  .fb{
+    padding:10px 0px 0px 0px;
+  }
+  footer{
+    background-color: rgb(33, 34, 33);
+    grid-area: footer;
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
+    font-family: "reenie beanie";
+    color:rgb(108, 130, 130);
+    font-size: 1.5em;
+  }
+  .red{
+    color:red;
+  }
+
+@media only screen and (max-width:550px){
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1fr;
+        grid-template-areas:
+        "nav"
+        "main"
+        "cont1"
+        "cont2"
+        "sidebar"
+        "cont3"
+        
+        "footer";
+    }
+    .img1{
+      opacity: 20%;
+      padding-bottom: 15px;
+      height:20px;
+      position: absolute;
+      opacity: 0;
+    }
+    .img2{
+      opacity: 40%;
+      padding-bottom: 8px;
+      height:30px;
+      position: absolute;
+      opacity: 0;
+    }
+    .img3{
+      opacity: 45%;
+      height:50px;
+      padding-bottom: 10px;
+    }
+    .img4{
+      opacity: 100%;
+      height:70px;
+      width:85px;
+      
+    }
+    .img5{
+      opacity: 45%;
+      height:50px;
+      padding-bottom: 10px;
+    }
+    .img6{
+      opacity: 40%;
+      padding-bottom: 8px;
+      height:30px;
+      position: absolute;
+      opacity: 0;
+    }
+    .img7{
+      opacity: 20%;
+      padding-bottom: 15px;
+      height:20px;
+      position: absolute;
+      opacity: 0;
+    }
+    .nav-title-left{
+      float:left;
+      padding:10px 0px 0px 10px;
+      font-size: .8em;
+    }
+    .nav-title-right{
+      float:right;
+      padding:10px 10px 0px 0px;
+      font-size: .8em;
+    }
+    .main-pic1{
+      float: left;
+      color:red;
+      padding-left: 155px;
+      
+  
+    }
+   
+    .main-pic2{
+      float:left;
+      padding-left:40px;
+      color: red;
+      font-size: 1.5em;
+    }
+   
+    
+    .main-pic3{
+      float:left;
+      padding-left: 155px;
+      color: red;
+    }
+}
